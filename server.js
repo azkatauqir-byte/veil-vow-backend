@@ -1,4 +1,4 @@
-
+﻿
 // VEIL & VOW - Final Production Backend - Same Colors - CTO Approved
 // Navy #0A1931 Gold #C6A664 Offwhite #F9F7F2 Line #E8E0D0
 // Gold V with White Chiffon Veil Logo
@@ -90,4 +90,5 @@ app.post('/api/report', (req,res)=>{
   res.json({message:'Report logged - 10 same category = red flag - 1st/2nd/final warning then block'});
 });
 
-app.listen(3000, ()=>console.log(THEME.name+' Final Production Running on 3000 - Same Colors', THEME));
+if (require.main === module) { app.listen(3000, () => console.log('VEIL & VOW Final Production Running on 3000 - Same Colors Navy Gold Offwhite')); } module.exports = app;
+
